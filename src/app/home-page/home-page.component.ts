@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {AF} from "../../providers/af";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home-page',
@@ -9,9 +7,8 @@ import {Router} from "@angular/router";
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(public afService: AF) {}
+  constructor() {}
 
   ngOnInit() {
   }
-
 }

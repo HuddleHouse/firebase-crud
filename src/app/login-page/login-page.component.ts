@@ -13,13 +13,8 @@ export class LoginPageComponent {
 
   login() {
     this.afService.loginWithGoogle().then((data) => {
-      console.log(data);
+      // Send them to the homepage if they are logged in
       this.router.navigate(['']);
     })
   }
-
-  logout() {
-    this.afService.logout();
-  }
-
 }
