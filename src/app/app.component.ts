@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {AF} from "../providers/af";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  public isLoggedIn: boolean;
+
+  constructor(public afService: AF, private router: Router) {
+    this.afService.af.auth.subscribe(
+      (auth) => {
+        if(auth == null) {
+          console.log("Not Logged in.");
+          this.router.navigate(['login']);
+          this.isLoggedIn = false;
+        }
+        else {
+          console.log(auth);
+          this.isLoggedIn = true;
+        }
+      }
+    );
+  }
+
+  logout() {
+    this.afService.logout();
+  }
 }
