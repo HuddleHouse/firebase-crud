@@ -4,11 +4,13 @@ import {AngularFire, AuthProviders, AuthMethods, FirebaseListObservable} from 'a
 @Injectable()
 export class AF {
   public messages: FirebaseListObservable<any>;
+  public users: FirebaseListObservable<any>;
   public displayName: string;
   public email: string;
 
   constructor(public af: AngularFire) {
     this.messages = this.af.database.list('messages');
+    this.users = this.af.database.list('users');
   }
 
   /**
@@ -29,12 +31,12 @@ export class AF {
     return this.af.auth.logout();
   }
 
-  setDisplayName(name) {
-    this.displayName = name;
-  }
-
-  setEmail(email) {
-    this.email = email;
+  addUserInfo(){
+    //We saved their auth info now save the rest to the db.
+    this.users.push({
+      email: this.email,
+      displayName: this.displayName
+    });
   }
 
   sendMessage(text) {

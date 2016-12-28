@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8">
 
-      <div class="bs-example">
+      <div #scrollMe class="bs-example" id="messages">
 
         <div *ngFor="let message of messages | async">
           <div class="bubble" [class.you]="isYou(message.email)" [class.me]="isMe(message.email)">
@@ -16,10 +16,19 @@
       </div>
 
       <figure class="highlight">
-        <input type="textarea" class="message-text" [(ngModel)]="newMessage">
+        <input type="textarea" class="message-text" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
         <a class="send-message" (click)="sendMessage()">SEND</a>
       </figure>
 
+    </div>
+
+    <div class="col-md-4">
+      <div class="bs-example">
+        <h3>Users</h3>
+        <ul class="list-group">
+          <li *ngFor="let user of users | async" class="list-group-item">{{user.displayName}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
