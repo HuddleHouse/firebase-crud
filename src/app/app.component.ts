@@ -18,11 +18,16 @@ export class AppComponent {
       (auth) => {
         if(auth == null) {
           console.log("Not Logged in.");
-          this.router.navigate(['login']);
+
           this.isLoggedIn = false;
+          this.router.navigate(['login']);
         }
         else {
           console.log("Successfully Logged in.");
+          // Set the Display Name and Email so we can attribute messages to them
+          this.afService.displayName = auth.google.displayName;
+          this.afService.email = auth.google.email;
+
           this.isLoggedIn = true;
         }
       }
