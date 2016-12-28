@@ -33,7 +33,7 @@ export class AF {
 
   addUserInfo(){
     //We saved their auth info now save the rest to the db.
-    this.af.database.object('users/'+ this.displayName).update({
+    this.users.push({
       email: this.email,
       displayName: this.displayName
     });
