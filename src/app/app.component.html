@@ -5,8 +5,7 @@
       <a class="navbar-brand" href="#">Firebase CRUD</a>
     </div>
 
-
-    <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div *ngIf="isLoggedIn">
       <ul class="nav navbar-nav navbar-right border-left">
         <li><a (click)="logout()">Logout</a></li>
       </ul>

@@ -31,6 +31,9 @@ export class AF {
     return this.af.auth.logout();
   }
 
+  /**
+   *
+   */
   addUserInfo(){
     //We saved their auth info now save the rest to the db.
     this.users.push({
@@ -39,6 +42,10 @@ export class AF {
     });
   }
 
+  /**
+   * Saves a message to the Firebase Realtime Database
+   * @param text
+   */
   sendMessage(text) {
     var message = {
       message: text,
