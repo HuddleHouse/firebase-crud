@@ -24,7 +24,7 @@
   color: #fff;
   text-shadow: 0 1px rgba(0,0,0,0.1);
   background-color: #4d90fe;
-  padding: 17px 0px;
+  padding: 11px 0px;
   font-family: roboto;
   font-size: 21px;
    background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed));
@@ -40,7 +40,7 @@
 
 .loginmodal-container a {
   text-decoration: none;
-  color: #666;
+  color: #2e6da4;
   font-weight: 400;
   text-align: center;
   display: inline-block;

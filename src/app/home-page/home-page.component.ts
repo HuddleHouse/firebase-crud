@@ -11,16 +11,12 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   public newMessage: string;
   public messages: FirebaseListObservable<any>;
-  public users: FirebaseListObservable<any>;
 
   constructor(public afService: AF) {
     this.messages = this.afService.messages;
-    this.users = this.afService.users;
   }
 
-  ngOnInit() {
-    this.scrollToBottom();
-  }
+  ngOnInit() {}
 
   ngAfterViewChecked() {
     this.scrollToBottom();
@@ -31,7 +27,6 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
     } catch(err) { }
   }
-
 
   sendMessage(){
     this.afService.sendMessage(this.newMessage);
@@ -51,5 +46,4 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
     else
       return true;
   }
-
 }

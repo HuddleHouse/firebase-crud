@@ -7,6 +7,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {AF} from "../providers/af";
 import { HomePageComponent } from './home-page/home-page.component';
 import {FormsModule} from "@angular/forms";
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDoSESpawwUQXaqHZkvcMLDmQHjke9Q36Q",
@@ -18,7 +19,8 @@ export const firebaseConfig = {
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent }
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegistrationPageComponent}
 ];
 
 @NgModule({
@@ -28,7 +30,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  declarations: [ AppComponent, LoginPageComponent, HomePageComponent ],
+  declarations: [ AppComponent, LoginPageComponent, HomePageComponent, RegistrationPageComponent ],
   bootstrap: [ AppComponent ],
   providers: [AF]
 })

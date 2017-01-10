@@ -1,0 +1,22 @@
+<div *ngIf="error" class="alert alert-warning" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  {{error}}
+</div>
+
+<div class="modal-dialog">
+  <div class="registermodal-container">
+    <h1>Register</h1><br>
+
+    <form class="form-signin" (submit)="register($event, name.value, email.value, password.value)">
+      <label for="name" class="sr-only">Name</label>
+      <input #name type="text" id="name" class="form-control" placeholder="Name" required="">
+      <label for="email" class="sr-only">Email address</label>
+      <input #email type="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input #password type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <br>
+      <button  class="btn btn-md btn-primary btn-block" type="submit">Register</button>
+    </form>
+  </div>
+</div>
