@@ -1,8 +1,6 @@
 # FirebaseCrud
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
-
-## This is a tutorial series that can be found on [progblog.io](https://progblog.io)
+## This is the code for a tutorial series that can be found on [progblog.io](https://progblog.io)
 
 In this tutorial we start with a blank app generated using Angular CLI. We use [Firebase](https://firebase.google.com/) to make the next steps EASY. First, we use Firebase's authentication to add Google Login. We later extend that to also use email/password. We then use the Firebase Realtime Database to make a simple chat app. This project is my attempt to show how easy Firebase makes seemingly arduous tasks.
 
