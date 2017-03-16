@@ -10,7 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDoSESpawwUQXaqHZkvcMLDmQHjke9Q36Q",
+  apiKey: "*************************",
   authDomain: "fir-crud-93710.firebaseapp.com",
   databaseURL: "https://fir-crud-93710.firebaseio.com",
   storageBucket: "fir-crud-93710.appspot.com",
