@@ -17,7 +17,6 @@ export const firebaseConfig = {
   messagingSenderId: "720204736178"
 };
 
-
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'login', component: LoginPageComponent },
